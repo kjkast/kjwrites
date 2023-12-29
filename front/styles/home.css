@@ -26,14 +26,23 @@ body {
     background-color: rgb(171, 166, 94);
 }
 
+h1 {
+    font-size: medium;
+}
+h2 {
+    font-size: medium;
+}
+
 .bar-container {
-    grid-row: 1/2;
-    grid-column: 1/4;
+    position: fixed;
+    width: 100%;
+    height: 20px;
 
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 
     /* background-color: var(--accent-color); */
+    background-color: var(--first-color);
     color: var(--first-text-color);
 
     animation: 0.7s 1 ease slideInFromAbove;
@@ -43,7 +52,7 @@ body {
     grid-column: 1/2;
     padding: 0px 0px 0px 5px;
 
-    animation: colorPopTextOnly ease-in 2s 1.82s 1;
+    animation: colorPopTextOnly ease-in 2s 1.92s 1;
 }
 
 .nav-item {
@@ -71,6 +80,63 @@ body {
 }
 .nav-item-three {
     grid-column: 4/5;
+}
+.nav-item-four {
+    grid-column: 5/6;
+}
+
+.dropdown {
+    display: none;
+
+    position: fixed;
+    grid-column: 5/6;
+
+    width: fit-content;
+    height: min-content;
+    list-style-type: none;
+}
+
+@media screen and (max-width:400px) {
+    .nav-item {
+        display: none;
+    }
+
+    .bar-dropdown-container {
+        grid-column: 5/6;
+        padding: 5px 0px 0px 0px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .bar {
+        width: 50%;
+        height: 14%;
+        background-color: var(--first-text-color);
+    }
+
+    .drop-item {
+        text-align: center;
+        text-decoration: none;
+        color: var(--first-color);
+
+        padding: 5px;
+    }
+
+    .bar-dropdown-container:hover .dropdown{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: var(--accent-color);
+        top: 20px;
+        right: 20px;
+        position: fixed;
+        border-radius: 7px;
+        padding: 3px;
+    }
 }
 
 .recent-post-container {
@@ -111,7 +177,10 @@ body {
     animation-delay: 1.05s;
 }
 .third-delay {
-    animation-delay: 1.45s;
+    animation-delay: 1.3s;
+}
+.fourth-delay {
+    animation-delay: 1.55s;
 }
 
 @keyframes slideInFromAbove {
