@@ -129,7 +129,8 @@ h2 {
         text-decoration: none;
         color: var(--first-color);
 
-        padding: 5px;
+        margin: 5px 3px;
+        border-bottom: solid 1px var(--first-text-color);
     }
 
     .bar-dropdown-container:hover .dropdown{
