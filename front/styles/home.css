@@ -89,11 +89,18 @@ h2 {
     display: none;
 
     position: fixed;
-    grid-column: 5/6;
 
     width: fit-content;
     height: min-content;
     list-style-type: none;
+
+    background-color: var(--accent-color);
+    top: 20px;
+    right: 20px;
+    position: fixed;
+    border-radius: 7px;
+    padding: 3px;
+    border: var(--first-text-color) 2px solid;
 }
 
 @media screen and (max-width:400px) {
@@ -129,13 +136,6 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        background-color: var(--accent-color);
-        top: 20px;
-        right: 20px;
-        position: fixed;
-        border-radius: 7px;
-        padding: 3px;
     }
 }
 
