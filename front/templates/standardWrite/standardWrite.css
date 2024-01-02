@@ -14,24 +14,26 @@
 
 body {
     display: grid;
-    grid-template-rows: 20px 200px 500px 125px 500px 125px ;
     grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 20px auto 100px;
 
     background-color: var(--first-color);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: calc(15px + 0.390625vw);
 }
 
 h1 {
-    font-size: medium;
+    font-size: 2rem;
 }
 h2 {
-    font-size: medium;
+    font-size: 1.5rem;
 }
-
-.bg-container {
-    grid-row: 6/7;
-    grid-column: 1/4;
-    background-color: rgb(171, 166, 94);
+h3 {
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+p {
+    font-size: 1rem;
 }
 
 .bar-container {
@@ -52,8 +54,6 @@ h2 {
 .website-name {
     grid-column: 1/2;
     padding: 0px 0px 0px 5px;
-
-    animation: colorPopTextOnly ease-in 2s 1.65s 1;
 }
 
 .nav-item {
@@ -62,7 +62,6 @@ h2 {
     color: var(--first-text-color);
     
     transition: all 0.3s;
-    animation: 0.75s 1 ease-in colorPopTextOnly;
 }
 .nav-item:hover {
     background-color: var(--darker-accent-color);
@@ -142,47 +141,6 @@ h2 {
     }
 }
 
-.recent-post-container {
-    /* body positioning */
-    grid-column: 2/3;
-    grid-row: 3/4;
-
-    /* text here */
-    display: grid;
-    grid-template-rows: 1fr 10fr;
-}
-.rp-banner {
-    grid-row: 1/2;
-
-    text-align: center;
-    background-color: var(--accent-color);
-    border: solid 2px var(--first-text-color);
-}
-.rp-text {
-    grid-row: 2/3;
-    background-color: var(--first-color);
-    border: solid 2px var(--first-text-color);
-}
-
-.many-posts-container {
-    grid-row: 5/6;
-    grid-column: 1/4;
-    background: var(--first-color);
-
-    display: flex;
-    /* SPOTIFY TYPE ELEMENTS TO SHOW THE POST */
-}
-
-.first-delay {
-    animation-delay: 0.8s;
-}
-.second-delay {
-    animation-delay: 1.05s;
-}
-.third-delay {
-    animation-delay: 1.3s;
-}
-
 @keyframes slideInFromAbove {
     from {
         transform: translateY(-100%);
@@ -193,22 +151,24 @@ h2 {
     }
 }
 
-@keyframes colorPopTextOnly {
-    from {
-        color: var(--first-color);
-    }
-    to {
-        color: var(--first-text-color);
-    }
+.writing {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: left;
 }
 
-@keyframes sizePop {
-    from {
-
-    }
-
-    to {
-
-    }
+.header-underline {
+    padding-bottom: 5px;
+    border-bottom: var(--accent-color) 2px solid;
 }
 
+.main-text {
+    margin-top: 20px;
+}
